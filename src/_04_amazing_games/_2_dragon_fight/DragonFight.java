@@ -16,18 +16,18 @@ public class DragonFight {
 		// 1. Create some variables to hold health levels
 		
 			// playerHealth to store your health - set it equal to 100
-	
+		int playerHealth = 100; 
 			// dragonHealth to store the dragon's health - set it equal to 100
-
+		int dragonHealth = 500;
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
 		
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
-	
+		int playerAttack = 0;
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
 
-		
+		 int dragonAttack = 0;
 		//  This while statement will cause the game attack code to repeat
 		while (true) {
 
@@ -35,22 +35,31 @@ public class DragonFight {
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
-	
+			String input = JOptionPane.showInputDialog("Wil you attack with a mighty yell, overpowered kick, or a raging boot?");
+				
 				// 4. If they typed in "yell":
-	
+				if(input.contentEquals("yell")) {
 					  // -- Find a random number between 0 and 10 and store it in playerAttack. Use
 					  // ran.nextInt(10)
-			
+					playerAttack = ran.nextInt(10);
+				}
 				// 5. If they typed in "kick":
-	
+					if(input == ("kick")) {
 					  // -- Find a random number between 0 and 25 and store it in playerAttack.
-		
-				// 6. Subtract the player attack value from the dragon's health
-
+						playerAttack = ran.nextInt(25);
+					}
+						
+				//5.1 If they typed "boot':		
+						if(input == ("boot")) {
+						// Find a random number between 0 and 40 and store it in playerAttack. 
+							playerAttack = 	ran.nextInt(40);
+						}
+						// 6. Subtract the player attack value from the dragon's health
+dragonHealth = dragonHealth-playerAttack;
 			// THE DRAGON RETALIATES
 
 				// 7. Find a random number between 0 and 35 and store it in dragonAttack
-	
+ran.nextInt(105);
 				// 8. Subtract the dragon attack value from the player's health
 
 			// ASSESS THE DAMAGE
@@ -71,21 +80,22 @@ public class DragonFight {
 			// round)
 			
 
-		} // this is the end of the while loop
+						 // this is the end of the while loop
 
-	}
+	}}
 
 	static void playerLost() {
-		// 11. Tell the player that they have been defeated by the dragon and have no treasure
+		// 11. Tell the player that they have been defeated by the dragon and have no
+		// treasure
 
-
-		System.exit(0);   //This code ends the program
+		System.exit(0); // This code ends the program
 	}
 
 	static void dragonLost() {
-		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
+		// 12. Tell the user that the dragon has been defeated and they get a ton of
+		// gold!
 
-		System.exit(0);   //This code ends the program
+		System.exit(0); // This code ends the program
 	}
 
 }
