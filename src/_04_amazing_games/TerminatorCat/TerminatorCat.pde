@@ -9,22 +9,23 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
-
+int x1=520;
+int y1=350;
+int x2=800;
+int y2=450;
 void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+cat = loadImage("Cat.jpeg");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
-
+size(1200,800);
 // 4. Resize the cat so it is the same size as the sketch
-
+cat.resize(1200,800);
 // 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
 //    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+ background(cat);
 
   }
 
@@ -43,25 +44,28 @@ void draw() {
 
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
-
+noStroke();
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
 
-
+fill(#F0113E);
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+               // ellipse(x, y, width, height);
 // Run the program to make sure it is in the right place and is the right size.
+ellipse(x1,y1,200,200);
+ellipse(x2,y2,200,200);
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
-    x+=1;
-    y+=1;
-    
+    x1+=15;
+    y1+=15;
+    x2+=15;
+    y2+=15; 
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
  
