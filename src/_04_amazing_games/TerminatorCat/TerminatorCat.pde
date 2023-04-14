@@ -54,8 +54,8 @@ fill(#F0113E);
 //                  The ellipse command looks like this:
                // ellipse(x, y, width, height);
 // Run the program to make sure it is in the right place and is the right size.
-ellipse(x1,y1,200,200);
-ellipse(x2,y2,200,200);
+ellipse(x1,y1,150,150);
+ellipse(x2,y2,150,150);
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
